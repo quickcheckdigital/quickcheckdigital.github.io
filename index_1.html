@@ -1,0 +1,218 @@
+<html>
+
+	<head>
+
+	<!-- Title & Favicon -->
+    <! Quick_check stand 28.11_V2 ---!>
+	<meta charset="utf-8">
+	<title>Chick_CheckApp</title>
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}" />
+
+	<!-- Responsiveness -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0" />
+
+	<!-- Style sheets -->
+	<!---<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}"/>--->
+    <link rel="stylesheet" media="screen" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+    <!---<link href="style.css" rel="stylesheet" type="text/css">--->
+
+	<!-- JS libraries -->
+	<script src="{{ url_for('static', filename='dependency/jquery.min.js') }}"></script>
+
+	</head>
+
+	<body>
+		
+        <div class="help-tip" id="help_text">
+            <p><b>QuickCheck zur Beurteilung der Anforderungen an die digitalen Kundenschnittstellen</b></p></div>
+		
+        <div>
+            <input type="button" id="button1" value="Fragebogen zurücksetzen" style="background-color:lightseagreen;color:darkblue;width:200px; height:25px">
+            <input type="button" id="button2" value="Fragebogen auswerten" style="background-color:salmon;color:darkblue;width:200px; height:25px">
+  		    <input type="text" id="check" value="beginn" style="font-weight: bold;text-align: center;width: 300px;height:25px;background-color:powderblue;border: 0"  readonly> 
+        </div>
+        
+        <!-- Inputs -->        
+        <hr size="2" width=95% color="cornflowerblue">  
+         
+        <div class="Frage1">
+                <fieldset name="synchrone Kommunikation" id="Q1" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 1</legend>
+                    <p><b>Synchrone Kommunikation:</b> Die Kommunikation mit dem Kunden ist nicht zeitversetzt. Der Kunde bzw. das Untermehmen antwortet in der Regel sofort. </p>
+                 <input type="radio" id="F1A" name="F1" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F1B" name="F1" ><label>wichtig</label>
+                 <input type="radio" id="F1C" name="F1" ><label>weniger wichtig</label>
+                 <input type="radio" id="F1D" name="F1" ><label>unwichtig</label>
+            </fieldset>
+        </div>
+        <div class="Frage2">
+            <div class="F2">
+                <fieldset name="Verfügbarkeit" id="Q2" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 2</legend>
+ 		         <p><b>24/7 Verfügbarkeit: </b>Es kann zu jeder Tages- und Nachtzeit ein Dialog mit dem Unternehmen stattfinden</p>
+                 <input type="radio" id="F2A" name="F2" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F2B" name="F2" ><label>wichtig</label>
+                 <input type="radio" id="F2C" name="F2" ><label>weniger wichtig</label>
+                 <input type="radio" id="F2D" name="F2" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Frage3">
+            <div class="F3">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 3</legend>   
+                 <p><b>Reichweite:</b> Der Kunde 'stolpert' über das Unternehmen, ohne explizit nach dem Unternehmen gesucht zu haben.</p>
+                 <input type="radio" id="F3A" name="F3" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F3B" name="F3" ><label>wichtig</label>
+                 <input type="radio" id="F3C" name="F3" ><label>weniger wichtig</label>
+                 <input type="radio" id="F3D" name="F3" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Frage4">
+            <div class="F4">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 4</legend>
+                    <p><b>Kosten- und Zeitersparnis durch Digitalisierung:</b> Die Digitalierung vereinfacht Abläufe und Vorgänge im Unternehmen und spart somit Kapital und Arbeitskraft..</p>
+                 <input type="radio" id="F4A" name="F4" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F4B" name="F4" ><label>wichtig</label>
+                 <input type="radio" id="F4C" name="F4" ><label>weniger wichtig</label>
+                 <input type="radio" id="F4D" name="F4" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Frage5">
+            <div class="F5">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 5</legend>
+                    <p><b>Visualisierung:</b> Das Unternehmen präsentiert reale Produkte oder reale Dienstleistungen digital</p>
+                 <input type="radio" id="F5A" name="F5" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F5B" name="F5" ><label>wichtig</label>
+                 <input type="radio" id="F5C" name="F5" ><label>weniger wichtig</label>
+                 <input type="radio" id="F5D" name="F5" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Frage6">
+            <div class="F6">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 6</legend>
+                    <p><b>Intensivierung der Kundenbeziehung:</b> Gemeint sind hier Tools, die es dem Unternehmen ermöglichen näher auf die Kundenwünsche einzugehen.<p/>
+                 <input type="radio" id="F6A" name="F6" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F6B" name="F6" ><label>wichtig</label>
+                 <input type="radio" id="F6C" name="F6" ><label>weniger wichtig</label>
+                 <input type="radio" id="F6D" name="F6" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Frage7">
+            <div class="F7">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 7</legend>
+                    <p><b>Mehr kundenspezifische Informationen sammeln und analysieren:</b> Die Digitalisierung vereinfacht das Sammeln und Analysieren von kundenspezifischen Informationen.<p/>
+                 <input type="radio" id="F7A" name="F7" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F7B" name="F7" ><label>wichtig</label>
+                 <input type="radio" id="F7C" name="F7" ><label>weniger wichtig</label>
+                 <input type="radio" id="F7D" name="F7" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Frage8">
+            <div class="F8">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 8</legend>
+                    <p><b>Maximierung der Absatzkanäle:</b> Zu den Standardvertriebskanälen (eigener Vertrieb, telefonisch, Einzelhandel etc.) werden digitale Kanäle hinzugefügt.</p>
+                 <input type="radio" id="F8A" name="F8" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F8B" name="F8" ><label>wichtig</label>
+                 <input type="radio" id="F8C" name="F8" ><label>weniger wichtig</label>
+                 <input type="radio" id="F8D" name="F8" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Frage9">
+            <div class="F9">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 9</legend>
+                    <p><b>Steigerung der Glaubwürdigkeit:</b> Geschieht durch die Darstellung von Referenzen, Bewertungen, Meinungen oder öffentlichen Feedbacks und Bewertungen.</p>
+                 <input type="radio" id="F9A" name="F9" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F9B" name="F9" ><label>wichtig</label>
+                 <input type="radio" id="F9C" name="F9" ><label>weniger wichtig</label>
+                 <input type="radio" id="F9D" name="F9" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Frage10">
+            <div class="F10">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 10</legend>
+                    <p><b>Automatisierung von Serviceaktivitäten:</b> Serviceaktivitäten werden an den Kunden selbst oder an autonome Systeme abgegeben..</p>
+                 <input type="radio" id="F10A" name="F10" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F10B" name="F10" ><label>wichtig</label>
+                 <input type="radio" id="F10C" name="F10" ><label>weniger wichtig</label>
+                 <input type="radio" id="F10D" name="F10" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+         </div>
+         <div class="Frage11">
+            <div class="F11">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 11</legend>
+                    <p><b>Spezifische Kundenakquise:</b> Ermöglichen die gezielte Ansprache von Kunden auf der Grundlage von zuvor gesammelten und analysierten Informationen.</p>
+                 <input type="radio" id="F11A" name="F11" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F11B" name="F11" ><label>wichtig</label>
+                 <input type="radio" id="F11C" name="F11" ><label>weniger wichtig</label>
+                 <input type="radio" id="F11D" name="F11" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Frage12">
+            <div class="F12">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 12</legend>
+                    <p><b>Automatisierung von Vertriebsaktivitäten:</b> Vertriebsaktivitäten werden an den Kunden selbst oder an autonome Systeme abgegeben.</p>
+                 <input type="radio" id="F12A" name="F12" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F12B" name="F12" ><label>wichtig</label>
+                 <input type="radio" id="F12C" name="F12" ><label>weniger wichtig</label>
+                 <input type="radio" id="F12D" name="F12" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Frage13">
+            <div class="F13">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 13</legend>
+                    <p><b>Geringe Einstiegskosten:</b> Bei der Einführung sind die Innovationskosten gering.</p>
+                 <input type="radio" id="F13A" name="F13" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F13B" name="F13" ><label>wichtig</label>
+                 <input type="radio" id="F13C" name="F13" ><label>weniger wichtig</label>
+                 <input type="radio" id="F13D" name="F13" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Frage14">
+            <div class="F14">
+                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                 <legend>Frage 14</legend>
+                    <p><b>Geringe laufende Kosten:</b> Gemeint sind die Kosten während der Ausübung der Kundenschnittstelle ohne die Einstiegskosten.</p>
+                 <input type="radio" id="F14A" name="F14" ><label>sehr wichtig</label>                
+                 <input type="radio" id="F14B" name="F14" ><label>wichtig</label>
+                 <input type="radio" id="F14C" name="F14" ><label>weniger wichtig</label>
+                 <input type="radio" id="F14D" name="F14" ><label>unwichtig</label>
+                </fieldset>
+            </div>
+        </div>
+
+        <hr size="2" width=95% color="cornflowerblue"> 
+
+        <div>
+            <input type="button" id="button1" value="Fragebogen zurücksetzen" style="background-color:lightseagreen;color:darkblue;width:200px; height:25px">
+            <input type="button" id="button2" value="Fragebogen auswerten" style="background-color:salmon;color:darkblue;width:200px; height:25px">
+        </div>
+
+    </body>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="{{ url_for('static', filename='java_script_V14.js') }}"></script>
+
+</html>
+
