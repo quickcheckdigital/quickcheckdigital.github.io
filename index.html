@@ -6,7 +6,7 @@
     <! Quick_check stand 28.11_V2 ---!>
 	<meta charset="utf-8">
 	<title>Chick_CheckApp</title>
-	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}" />
+	<!--<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}" />
 
 	<!-- Responsiveness -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0" />
@@ -17,7 +17,8 @@
     <!---<link href="style.css" rel="stylesheet" type="text/css">--->
 
 	<!-- JS libraries -->
-	<script src="{{ url_for('static', filename='dependency/jquery.min.js') }}"></script>
+	<!--<script src="{{ url_for('static', filename='dependency/jquery.min.js') }}"></script>>-->
+    <script src='dependency/jquery.min.js'></script>
 
 	</head>
 
@@ -27,15 +28,16 @@
             <p><b>QuickCheck zur Beurteilung der Anforderungen an die digitalen Kundenschnittstellen</b></p></div>
 		
         <div>
-            <input type="button" id="button1" value="Fragebogen zurücksetzen" style="background-color:lightseagreen;color:darkblue;width:200px; height:25px">
-            <input type="button" id="button2" value="Fragebogen auswerten" style="background-color:salmon;color:darkblue;width:200px; height:25px">
+            <input type="button" id="button1" value="Fragebogen auswerten" style="background-color:lightseagreen;color:darkblue;width:200px; height:25px">
+            <input type="button" id="button2" value="Fragebogen zurücksetzen" style="background-color:salmon;color:darkblue;width:200px; height:25px">
   		    <input type="text" id="check" value="beginn" style="font-weight: bold;text-align: center;width: 300px;height:25px;background-color:powderblue;border: 0"  readonly> 
         </div>
         
         <!-- Inputs -->        
         <hr size="2" width=95% color="cornflowerblue">  
          
-        <div class="Frage1">
+
+        <div class="F1">
                 <fieldset name="synchrone Kommunikation" id="Q1" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 1</legend>
                     <p><b>Synchrone Kommunikation:</b> Die Kommunikation mit dem Kunden ist nicht zeitversetzt. Der Kunde bzw. das Untermehmen antwortet in der Regel sofort. </p>
@@ -43,10 +45,11 @@
                  <input type="radio" id="F1B" name="F1" ><label>wichtig</label>
                  <input type="radio" id="F1C" name="F1" ><label>weniger wichtig</label>
                  <input type="radio" id="F1D" name="F1" ><label>unwichtig</label>
-            </fieldset>
+                </fieldset>
         </div>
-        <div class="Frage2">
-            <div class="F2">
+   
+
+        <div class="F2">
                 <fieldset name="Verfügbarkeit" id="Q2" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 2</legend>
  		         <p><b>24/7 Verfügbarkeit: </b>Es kann zu jeder Tages- und Nachtzeit ein Dialog mit dem Unternehmen stattfinden</p>
@@ -55,11 +58,11 @@
                  <input type="radio" id="F2C" name="F2" ><label>weniger wichtig</label>
                  <input type="radio" id="F2D" name="F2" ><label>unwichtig</label>
                 </fieldset>
-            </div>
         </div>
-        <div class="Frage3">
-            <div class="F3">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+ 
+  
+        <div class="F3">
+                <fieldset name="Reichweite" id="Q3" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 3</legend>   
                  <p><b>Reichweite:</b> Der Kunde 'stolpert' über das Unternehmen, ohne explizit nach dem Unternehmen gesucht zu haben.</p>
                  <input type="radio" id="F3A" name="F3" ><label>sehr wichtig</label>                
@@ -67,11 +70,11 @@
                  <input type="radio" id="F3C" name="F3" ><label>weniger wichtig</label>
                  <input type="radio" id="F3D" name="F3" ><label>unwichtig</label>
                 </fieldset>
-            </div>
         </div>
-        <div class="Frage4">
-            <div class="F4">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+        
+ 
+        <div class="F4">
+                <fieldset name="Reichweite" id="Q4" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 4</legend>
                     <p><b>Kosten- und Zeitersparnis durch Digitalisierung:</b> Die Digitalierung vereinfacht Abläufe und Vorgänge im Unternehmen und spart somit Kapital und Arbeitskraft..</p>
                  <input type="radio" id="F4A" name="F4" ><label>sehr wichtig</label>                
@@ -79,11 +82,11 @@
                  <input type="radio" id="F4C" name="F4" ><label>weniger wichtig</label>
                  <input type="radio" id="F4D" name="F4" ><label>unwichtig</label>
                 </fieldset>
-            </div>
         </div>
-        <div class="Frage5">
-            <div class="F5">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+        
+
+        <div class="F5">
+                <fieldset name="Reichweite" id="Q5" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 5</legend>
                     <p><b>Visualisierung:</b> Das Unternehmen präsentiert reale Produkte oder reale Dienstleistungen digital</p>
                  <input type="radio" id="F5A" name="F5" ><label>sehr wichtig</label>                
@@ -91,11 +94,11 @@
                  <input type="radio" id="F5C" name="F5" ><label>weniger wichtig</label>
                  <input type="radio" id="F5D" name="F5" ><label>unwichtig</label>
                 </fieldset>
-            </div>
         </div>
-        <div class="Frage6">
-            <div class="F6">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+
+ 
+        <div class="F6">
+                <fieldset name="Reichweite" id="Q6" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 6</legend>
                     <p><b>Intensivierung der Kundenbeziehung:</b> Gemeint sind hier Tools, die es dem Unternehmen ermöglichen näher auf die Kundenwünsche einzugehen.<p/>
                  <input type="radio" id="F6A" name="F6" ><label>sehr wichtig</label>                
@@ -103,11 +106,11 @@
                  <input type="radio" id="F6C" name="F6" ><label>weniger wichtig</label>
                  <input type="radio" id="F6D" name="F6" ><label>unwichtig</label>
                 </fieldset>
-            </div>
         </div>
-        <div class="Frage7">
-            <div class="F7">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+
+ 
+        <div class="F7">
+                <fieldset name="Reichweite" id="Q7" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 7</legend>
                     <p><b>Mehr kundenspezifische Informationen sammeln und analysieren:</b> Die Digitalisierung vereinfacht das Sammeln und Analysieren von kundenspezifischen Informationen.<p/>
                  <input type="radio" id="F7A" name="F7" ><label>sehr wichtig</label>                
@@ -115,11 +118,10 @@
                  <input type="radio" id="F7C" name="F7" ><label>weniger wichtig</label>
                  <input type="radio" id="F7D" name="F7" ><label>unwichtig</label>
                 </fieldset>
-            </div>
         </div>
-        <div class="Frage8">
-            <div class="F8">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+
+        <div class="F8">
+                <fieldset name="Reichweite" id="Q8" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 8</legend>
                     <p><b>Maximierung der Absatzkanäle:</b> Zu den Standardvertriebskanälen (eigener Vertrieb, telefonisch, Einzelhandel etc.) werden digitale Kanäle hinzugefügt.</p>
                  <input type="radio" id="F8A" name="F8" ><label>sehr wichtig</label>                
@@ -127,11 +129,10 @@
                  <input type="radio" id="F8C" name="F8" ><label>weniger wichtig</label>
                  <input type="radio" id="F8D" name="F8" ><label>unwichtig</label>
                 </fieldset>
-            </div>
         </div>
-        <div class="Frage9">
-            <div class="F9">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+
+        <div class="F9">
+                <fieldset name="Reichweite" id="Q9" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 9</legend>
                     <p><b>Steigerung der Glaubwürdigkeit:</b> Geschieht durch die Darstellung von Referenzen, Bewertungen, Meinungen oder öffentlichen Feedbacks und Bewertungen.</p>
                  <input type="radio" id="F9A" name="F9" ><label>sehr wichtig</label>                
@@ -139,11 +140,10 @@
                  <input type="radio" id="F9C" name="F9" ><label>weniger wichtig</label>
                  <input type="radio" id="F9D" name="F9" ><label>unwichtig</label>
                 </fieldset>
-            </div>
         </div>
-        <div class="Frage10">
-            <div class="F10">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+
+        <div class="F10">
+                <fieldset name="Reichweite" id="Q10" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 10</legend>
                     <p><b>Automatisierung von Serviceaktivitäten:</b> Serviceaktivitäten werden an den Kunden selbst oder an autonome Systeme abgegeben..</p>
                  <input type="radio" id="F10A" name="F10" ><label>sehr wichtig</label>                
@@ -151,23 +151,21 @@
                  <input type="radio" id="F10C" name="F10" ><label>weniger wichtig</label>
                  <input type="radio" id="F10D" name="F10" ><label>unwichtig</label>
                 </fieldset>
-            </div>
-         </div>
-         <div class="Frage11">
-            <div class="F11">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+        </div>
+
+        <div class="F11">
+                <fieldset name="Reichweite" id="Q11" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 11</legend>
                     <p><b>Spezifische Kundenakquise:</b> Ermöglichen die gezielte Ansprache von Kunden auf der Grundlage von zuvor gesammelten und analysierten Informationen.</p>
                  <input type="radio" id="F11A" name="F11" ><label>sehr wichtig</label>                
                  <input type="radio" id="F11B" name="F11" ><label>wichtig</label>
                  <input type="radio" id="F11C" name="F11" ><label>weniger wichtig</label>
                  <input type="radio" id="F11D" name="F11" ><label>unwichtig</label>
-                </fieldset>
-            </div>
+                </fieldset> 
         </div>
-        <div class="Frage12">
-            <div class="F12">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+
+        <div class="F12">
+                <fieldset name="Reichweite" id="Q12" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 12</legend>
                     <p><b>Automatisierung von Vertriebsaktivitäten:</b> Vertriebsaktivitäten werden an den Kunden selbst oder an autonome Systeme abgegeben.</p>
                  <input type="radio" id="F12A" name="F12" ><label>sehr wichtig</label>                
@@ -175,11 +173,10 @@
                  <input type="radio" id="F12C" name="F12" ><label>weniger wichtig</label>
                  <input type="radio" id="F12D" name="F12" ><label>unwichtig</label>
                 </fieldset>
-            </div>
         </div>
-        <div class="Frage13">
-            <div class="F13">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+
+        <div class="F13">
+                <fieldset name="Reichweite" id="Q13" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 13</legend>
                     <p><b>Geringe Einstiegskosten:</b> Bei der Einführung sind die Innovationskosten gering.</p>
                  <input type="radio" id="F13A" name="F13" ><label>sehr wichtig</label>                
@@ -187,11 +184,10 @@
                  <input type="radio" id="F13C" name="F13" ><label>weniger wichtig</label>
                  <input type="radio" id="F13D" name="F13" ><label>unwichtig</label>
                 </fieldset>
-            </div>
         </div>
-        <div class="Frage14">
-            <div class="F14">
-                <fieldset name="Reichweite" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+
+        <div class="F14">
+                <fieldset name="Reichweite" id="Q14" style="width: 900px;margin-left: 20px;background-color:floralwhite">
                  <legend>Frage 14</legend>
                     <p><b>Geringe laufende Kosten:</b> Gemeint sind die Kosten während der Ausübung der Kundenschnittstelle ohne die Einstiegskosten.</p>
                  <input type="radio" id="F14A" name="F14" ><label>sehr wichtig</label>                
@@ -199,20 +195,81 @@
                  <input type="radio" id="F14C" name="F14" ><label>weniger wichtig</label>
                  <input type="radio" id="F14D" name="F14" ><label>unwichtig</label>
                 </fieldset>
-            </div>
         </div>
+        
+        <div class="Auswertung">
+                <fieldset name="Reichweite" id="ergebnis" style="width: 900px;margin-left: 20px;background-color:floralwhite">
+                    <legend><b>Auswertung</b></legend>
+		      <input type="text" style="font-weight: bold;text-align: center;width: 50px;background-color:powderblue;border: 0" value="Rang" readonly> <input type="text" style="font-weight: bold;text-align: center;width: 300px;background-color:powderblue;border: 0" value="Digitale Schnittstelle" readonly>
+              <input type="text" style="font-weight: bold;text-align: center;width: 190px;background-color:powderblue;border: 0" value="Wertung" readonly> <input type="text" style="font-weight: bold;text-align: center;width: 150px;background-color:powderblue;border: 0" value="Empfehlung" readonly>
+            <br>
+		      <input id="Rang1" type="text" style="text-align: left;width: 50px" readonly> <input id="Schnitt1" style="text-align: left;width: 300px" type="text">
+		      <input id="Wert1" type="text" style="text-align: right;width: 190px" readonly> <input id="Rat1" style="text-align: right;width: 150px" type="text" >
+            <br>
+		      <input id="Rang2" type="text"  style="text-align: left;width: 50px" readonly> <input id="Schnitt2" type="text" style="text-align: left;width: 300px">
+		      <input id="Wert2" type="text" style="text-align: right;width:190px "  readonly> <input id="Rat2" type="text" style="text-align: right;width: 150px">
+            <br>
+ 		      <input id="Rang3" type="text" style="text-align: left;width: 50px" readonly> <input id="Schnitt3" style="text-align: left;width: 300px" type="text">
+		      <input id="Wert3" type="text" style="text-align: right;width: 190px" readonly> <input id="Rat3" style="text-align: right;width: 150px" type="text" >
+            <br>
+		      <input id="Rang4" type="text"  style="text-align: left;width: 50px" readonly> <input id="Schnitt4" type="text" style="text-align: left;width: 300px">
+		      <input id="Wert4" type="text" style="text-align: right;width:190px "  readonly> <input id="Rat4" type="text" style="text-align: right;width: 150px">
+            <br>
+		      <input id="Rang5" type="text" style="text-align: left;width: 50px" readonly> <input id="Schnitt5" style="text-align: left;width: 300px" type="text">
+		      <input id="Wert5" type="text" style="text-align: right;width: 190px" readonly> <input id="Rat5" style="text-align: right;width: 150px" type="text" >
+            <br>
+		      <input id="Rang6" type="text"  style="text-align: left;width: 50px" readonly> <input id="Schnitt6" type="text" style="text-align: left;width: 300px">
+		      <input id="Wert6" type="text" style="text-align: right;width:190px "  readonly> <input id="Rat6" type="text" style="text-align: right;width: 150px">
+            <br>
+		      <input id="Rang7" type="text" style="text-align: left;width: 50px" readonly> <input id="Schnitt7" style="text-align: left;width: 300px" type="text">
+		      <input id="Wert7" type="text" style="text-align: right;width: 190px" readonly> <input id="Rat7" style="text-align: right;width: 150px" type="text" >
+            <br>
+		      <input id="Rang8" type="text"  style="text-align: left;width: 50px" readonly> <input id="Schnitt8" type="text" style="text-align: left;width: 300px">
+		      <input id="Wert8" type="text" style="text-align: right;width:190px "  readonly> <input id="Rat8" type="text" style="text-align: right;width: 150px">
+            <br>
+		      <input id="Rang9" type="text" style="text-align: left;width: 50px" readonly> <input id="Schnitt9" style="text-align: left;width: 300px" type="text">
+		      <input id="Wert9" type="text" style="text-align: right;width: 190px" readonly> <input id="Rat9" style="text-align: right;width: 150px" type="text" >
+            <br>
+		      <input id="Rang10" type="text"  style="text-align: left;width: 50px" readonly> <input id="Schnitt10" type="text" style="text-align: left;width: 300px">
+		      <input id="Wert10" type="text" style="text-align: right;width:190px "  readonly> <input id="Rat10" type="text" style="text-align: right;width: 150px">
+            <br>
+		      <input id="Rang11" type="text" style="text-align: left;width: 50px" readonly> <input id="Schnitt11" style="text-align: left;width: 300px" type="text">
+		      <input id="Wert11" type="text" style="text-align: right;width: 190px" readonly> <input id="Rat11" style="text-align: right;width: 150px" type="text" >
+            <br>
+		      <input id="Rang12" type="text"  style="text-align: left;width: 50px" readonly> <input id="Schnitt12" type="text" style="text-align: left;width: 300px">
+		      <input id="Wert12" type="text" style="text-align: right;width:190px "  readonly> <input id="Rat12" type="text" style="text-align: right;width: 150px">
+            <br>
+		      <input id="Rang13" type="text" style="text-align: left;width: 50px" readonly> <input id="Schnitt13" style="text-align: left;width: 300px" type="text">
+		      <input id="Wert13" type="text" style="text-align: right;width: 190px" readonly> <input id="Rat13" style="text-align: right;width: 150px" type="text" >
+            <br>
+		      <input id="Rang14" type="text"  style="text-align: left;width: 50px" readonly> <input id="Schnitt14" type="text" style="text-align: left;width: 300px">
+		      <input id="Wert14" type="text" style="text-align: right;width:190px "  readonly> <input id="Rat14" type="text" style="text-align: right;width: 150px">
+            <br>
+		      <input id="Rang15" type="text"  style="text-align: left;width: 50px" readonly> <input id="Schnitt15" type="text" style="text-align: left;width: 300px">
+		      <input id="Wert15" type="text" style="text-align: right;width:190px "  readonly> <input id="Rat15" type="text" style="text-align: right;width: 150px">
+            <br>
+		      <input id="Rang16" type="text" style="text-align: left;width: 50px" readonly> <input id="Schnitt16" style="text-align: left;width: 300px" type="text">
+		      <input id="Wert16" type="text" style="text-align: right;width: 190px" readonly> <input id="Rat16" style="text-align: right;width: 150px" type="text" >
+            <br>
+		      <input id="Rang17" type="text"  style="text-align: left;width: 50px" readonly> <input id="Schnitt17" type="text" style="text-align: left;width: 300px">
+		      <input id="Wert17" type="text" style="text-align: right;width:190px "  readonly> <input id="Rat17" type="text" style="text-align: right;width: 150px">
+            <br>
+                </fieldset>
+        </div>
+ 
 
         <hr size="2" width=95% color="cornflowerblue"> 
 
         <div>
-            <input type="button" id="button1" value="Fragebogen zurücksetzen" style="background-color:lightseagreen;color:darkblue;width:200px; height:25px">
-            <input type="button" id="button2" value="Fragebogen auswerten" style="background-color:salmon;color:darkblue;width:200px; height:25px">
+            <input type="button" id="button1" value="Fragebogen auswerten" style="background-color:lightseagreen;color:darkblue;width:200px; height:25px">
+            <input type="button" id="button2" value="Fragebogen zurücksetzen" style="background-color:salmon;color:darkblue;width:200px; height:25px">
         </div>
 
     </body>
 
 	<!-- Scripts -->
-	<script type="text/javascript" src="{{ url_for('static', filename='java_script_V14.js') }}"></script>
+	<!--<script type="text/javascript" src="{{ url_for('static', filename='java_script_V14.js') }}"></script>--->
+    <script src="java_script_V98.js"></script>
 
 </html>
 
